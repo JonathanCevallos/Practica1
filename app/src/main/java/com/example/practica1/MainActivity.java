@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
         //Creamos el Intent
         Intent intent = new Intent(this, SaludoActivity.class);
 
+        ////Localizar los controles EditText y de los RadioButton
         EditText txtNombre = (EditText) findViewById(R.id.txtNombre);
         EditText txtFechaNacimiento = (EditText) findViewById(R.id.txtFechaNacimiento);
         EditText txtTelefono = (EditText)findViewById(R.id.txtTelefono);
         rbMasculino= (RadioButton)findViewById(R.id.rbMasculino);
         rbFemenino= (RadioButton)findViewById(R.id.rbFemenino);
+        //Llamamos a la funcion validarSexo para determinar la seleccion ingresada
         validarSexo();
         //Creamos la información a pasar entre actividades - Pares Key-Value
         Bundle b = new Bundle();
